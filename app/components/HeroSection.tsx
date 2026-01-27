@@ -25,7 +25,7 @@ export default function HeroSection() {
 
     return (
         <>
-            <section className="text-[#ffffff] absolute inset-0 flex items-center justify-center">
+            <section className="text-[#ffffff] absolute inset-0 flex items-center justify-center ">
                 <div className="flex flex-col-reverse md:flex-row items-center pt-28 sm:pt-32 md:pt-24 md:h-[100%] w-[90%] xl:w-[70%] justify-between">
                     <div className="w-[90%] md:w-[55%]  xl:w-[50%]">
                         <p className="text-xl font-bold">Hello 👋, I'm</p>

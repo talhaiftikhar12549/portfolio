@@ -16,7 +16,7 @@ export default function Home() {
       {/* First section */}
       <section className='h-[100vh] w-full relative'>
 
-        <div id='Home' className='absolute inset-0 max-w-[100%] h-[90vh] md:h-[85vh]'>
+        <div id='Home' className='absolute inset-0 max-w-[100%] h-[100vh]'>
           <NavBar />
           <ParticlesComponent id="particles" />
         </div>
