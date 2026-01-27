@@ -40,8 +40,8 @@ const ParticlesComponent = (props: { id?: string }) => {
                 position: "absolute" as const,
                 width: "100%",
                 height: "100%",
-                top: 0,
-                left: 0
+                top: "0px",
+                left: "0px"
             },
             fpsLimit: 120, // Lowering to 120 or 60 is better for performance usually, default 240 is high
             interactivity: {
