@@ -10,9 +10,9 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Talha Iftikhar - Portfolio",
-  description: "Portfolio of Talha Iftikhar - Software Engineer and Web Developer",
-  keywords: ["Software Engineer", "Web Developer", "React", "Next.js", "Portfolio", "Talha Iftikhar"],
+  title: "Talha Iftikhar - Software Engineer & Web Developer",
+  description: "Talha Iftikhar is a skilled Software Engineer and Web Developer specializing in Next.js, React, and modern web technologies. Explore the portfolio of Talha Iftikhar to see projects and expertise.",
+  keywords: ["Software Engineer", "Talha Iftikhar", "Web Developer", "React Developer", "Next.js Developer", "Full Stack Developer", "Portfolio"],
   authors: [{ name: "Talha Iftikhar" }],
   publisher: "Talha Iftikhar",
   alternates: {
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Talha Iftikhar - Portfolio",
-    description: "Welcome to the portfolio of Talha Iftikhar. Explore my projects and skills.",
+    title: "Talha Iftikhar - Software Engineer & Web Developer",
+    description: "Talha Iftikhar is a skilled Software Engineer and Web Developer. Explore the portfolio of Talha Iftikhar.",
     url: "https://www.talhaiftikhar.com",
     siteName: "Talha Iftikhar Portfolio",
     images: [
