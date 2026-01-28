@@ -14,6 +14,21 @@ export const metadata: Metadata = {
   description: "Portfolio of Talha Iftikhar - Software Engineer and Web Developer",
   keywords: ["Software Engineer", "Web Developer", "React", "Next.js", "Portfolio", "Talha Iftikhar"],
   authors: [{ name: "Talha Iftikhar" }],
+  publisher: "Talha Iftikhar",
+  alternates: {
+    canonical: "https://talhaiftikhar.netlify.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Talha Iftikhar - Portfolio",
     description: "Welcome to the portfolio of Talha Iftikhar. Explore my projects and skills.",
