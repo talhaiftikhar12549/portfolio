@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://talhaiftikhar.netlify.app/sitemap.xml',
+        sitemap: 'https://www.talhaiftikhar.com/sitemap.xml',
     };
 }

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Talha Iftikhar" }],
   publisher: "Talha Iftikhar",
   alternates: {
-    canonical: "https://talhaiftikhar.netlify.app",
+    canonical: "https://www.talhaiftikhar.com",
   },
   robots: {
     index: true,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Talha Iftikhar - Portfolio",
     description: "Welcome to the portfolio of Talha Iftikhar. Explore my projects and skills.",
-    url: "https://talhaiftikhar.netlify.app",
+    url: "https://www.talhaiftikhar.com",
     siteName: "Talha Iftikhar Portfolio",
     images: [
       {
