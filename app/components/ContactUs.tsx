@@ -26,14 +26,14 @@ export default function ContactUs() {
                                 <p className="text-3xl font-semibold">Let's connect.</p>
                                 <div className='py-4'>
                                     <div className="py-4 px-0 xl:px-4 w-[100%] flex item-center">
-                                        <img className="px-2" src="/assets/placeholder.png" alt="" />
+                                        <img className="px-2" src="/assets/placeholder.webp" alt="" />
 
                                         <p className="text-xs md:text-sm lg:text-base px-2 font-semibold">Pakistan</p>
 
                                     </div>
 
                                     <div className="py-4 px-0 xl:px-4 w-[100%] flex item-center">
-                                        <img className="px-2" src="/assets/mailcolor.png" alt="" />
+                                        <img className="px-2" src="/assets/mailcolor.webp" alt="" />
 
                                         <p className="text-xs md:text-sm lg:text-base px-2 font-semibold">talhaiftikhar12549@gmail.com</p>
 
@@ -45,7 +45,7 @@ export default function ContactUs() {
                                         <img
 
                                             className="cursor-pointer"
-                                            src={isHoveredGithub ? "/assets/githubcolor.png" : "/assets/githubwhite.png"}
+                                            src={isHoveredGithub ? "/assets/githubcolor.webp" : "/assets/githubwhite.webp"}
                                             alt="GitHub Icon"
                                             onMouseEnter={() => setIsHoveredGithub(true)}
                                             onMouseLeave={() => setIsHoveredGithub(false)}
@@ -54,7 +54,7 @@ export default function ContactUs() {
                                     <a href="https://www.linkedin.com/in/muhammadtalha12549/" target="_blank" rel="noopener noreferrer">
                                         <img
                                             className="cursor-pointer"
-                                            src={isHoveredLinkedin ? "/assets/linkedincolor.png" : "/assets/linkedinwhite.png"}
+                                            src={isHoveredLinkedin ? "/assets/linkedincolor.webp" : "/assets/linkedinwhite.webp"}
                                             alt="LinkedIn Icon"
                                             onMouseEnter={() => setIsHoveredLinkedin(true)}
                                             onMouseLeave={() => setIsHoveredLinkedin(false)}
@@ -63,7 +63,7 @@ export default function ContactUs() {
                                     <a href="https://www.instagram.com/talhaiftikhar12549/" target="_blank" rel="noopener noreferrer">
                                         <img
                                             className="cursor-pointer"
-                                            src={isHoveredInsta ? "/assets/instagramcolor.png" : "/assets/instagramwhite.png"}
+                                            src={isHoveredInsta ? "/assets/instagramcolor.webp" : "/assets/instagramwhite.webp"}
                                             alt="Insta Icon"
                                             onMouseEnter={() => setIsHoveredInsta(true)}
                                             onMouseLeave={() => setIsHoveredInsta(false)}
@@ -72,7 +72,7 @@ export default function ContactUs() {
                                     <a href="mailto:talhaiftikhar12549@gmail.com?subject=Hello%20Talha&body=Hi%20there,%20I%20wanted%20to%20reach%20out." target="_blank" rel="noopener noreferrer">
                                         <img
                                             className="cursor-pointer"
-                                            src={isHoveredGmail ? "/assets/gmailcolor.png" : "/assets/gmailwhite.png"}
+                                            src={isHoveredGmail ? "/assets/gmailcolor.webp" : "/assets/gmailwhite.webp"}
                                             alt="Gmail Icon"
                                             onMouseEnter={() => setIsHoveredGmail(true)}
                                             onMouseLeave={() => setIsHoveredGmail(false)}

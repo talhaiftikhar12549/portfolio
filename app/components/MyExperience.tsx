@@ -75,7 +75,7 @@ export default function MyExperience() {
                                 <div className="sm:w-[25%] mx-2 md:mx-0  md:w-[20%] flex items-center justify-center">
                                     <img
                                         className="h-[150px] w-[150px]"
-                                        src="/assets/uforiainfotech_logo-removebg-preview.png"
+                                        src="/assets/uforiainfotech_logo-removebg-preview.webp"
                                         alt=""
                                     />
                                 </div>
@@ -133,7 +133,7 @@ export default function MyExperience() {
                         <div className=" py-12 flex bg-[#060614]">
                             <div className="flex flex-col sm:flex-row w-[100%]">
                                 <div className="sm:w-[25%] mx-2 md:mx-0  md:w-[20%] flex items-center justify-center">
-                                    <img className="h-[100px] w-[150px]" src="/assets/ujala-school-logo-removebg-preview.png" alt="Ujala Logo" />
+                                    <img className="h-[100px] w-[150px]" src="/assets/ujala-school-logo-removebg-preview.webp" alt="Ujala Logo" />
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0">
@@ -193,7 +193,7 @@ export default function MyExperience() {
                         <div className=" py-12 flex bg-[#060614]">
                             <div className="flex flex-col sm:flex-row w-[100%]">
                                 <div className="sm:w-[25%] mx-2 md:mx-0  md:w-[20%] flex items-center justify-center">
-                                    <img className="h-[150px] w-[150px]" src="/assets/HITEC_University_Logo.png" alt="" />
+                                    <img className="h-[150px] w-[150px]" src="/assets/HITEC_University_Logo.webp" alt="" />
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">

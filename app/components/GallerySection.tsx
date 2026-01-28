@@ -45,7 +45,7 @@ const GallerySection = () => {
                                     <div className="relative">
                                         <img
                                             className="w-full max-h-[700px] h-100% object-cover"
-                                            src="/assets/desk2024.jpg"
+                                            src="/assets/desk2024.webp"
                                             alt="Desk setup 2023"
                                         />
                                         <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
@@ -58,7 +58,7 @@ const GallerySection = () => {
                                     <div className="relative">
                                         <img
                                             className="w-full max-h-[700px] h-100% object-cover"
-                                            src="/assets/povatUforia.jpg"
+                                            src="/assets/povatUforia.webp"
                                             alt="POV at Uforia"
                                         />
                                         <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
@@ -71,7 +71,7 @@ const GallerySection = () => {
                                     <div className="relative">
                                         <img
                                             className="w-full max-h-[700px] h-100% object-cover"
-                                            src="/assets/rankingpicture.jpg"
+                                            src="/assets/rankingpicture.webp"
                                             alt="Ranking"
                                         />
                                         <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
@@ -84,7 +84,7 @@ const GallerySection = () => {
                                     <div className="relative">
                                         <img
                                             className="w-full max-h-[700px] h-100% object-cover"
-                                            src="/assets/trickleup.jpeg"
+                                            src="/assets/trickleup.webp"
                                             alt="POV at TrickleUp"
                                         />
                                         <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
@@ -97,7 +97,7 @@ const GallerySection = () => {
                                     <div className="relative">
                                         <img
                                             className="w-full max-h-[700px] h-100% object-cover"
-                                            src="/assets/seo stats.jpeg"
+                                            src="/assets/seo stats.webp"
                                             alt="SEO Stats"
                                         />
                                         <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
@@ -110,7 +110,7 @@ const GallerySection = () => {
                                     <div className="relative">
                                         <img
                                             className="w-full max-h-[700px] h-100% object-cover"
-                                            src="/assets/desk 2025.jpeg"
+                                            src="/assets/desk 2025.webp"
                                             alt="Desk setup 2025"
                                         />
                                         <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">

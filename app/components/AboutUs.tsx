@@ -18,7 +18,7 @@ export default function AboutUs() {
                     <div className="w-full md:w-1/2 h-[50vh] md:h-[70vh] flex justify-center relative">
                         <img
                             title="Hobbies and activities I love to do."
-                            src="/assets/hobbies collage.png"
+                            src="/assets/hobbies collage.webp"
                             alt="Collage of hobbies"
                             className="h-full w-auto object-contain"
                         />

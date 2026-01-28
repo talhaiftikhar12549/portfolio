@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Talha Iftikhar Portfolio",
     images: [
       {
-        url: "/assets/talha crop.JPG",
+        url: "/assets/talha crop.webp",
         width: 800,
         height: 600,
         alt: "Talha Iftikhar Profile",

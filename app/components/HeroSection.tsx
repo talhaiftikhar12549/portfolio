@@ -76,7 +76,7 @@ export default function HeroSection() {
                         <img
                             title="Yep, that's me."
                             className="rounded-full xl:h-[400px] xl:w-[400px] object-cover"
-                            src="/assets/talha crop.JPG"
+                            src="/assets/talha crop.webp"
                             alt="Talha"
                         />
                     </div>

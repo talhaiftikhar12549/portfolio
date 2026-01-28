@@ -21,7 +21,7 @@ export default function EducationSkills() {
 
                                 <div className="absolute top-3 -left-2">
                                     <p className="bg-[#2c2ebf] py-1 px-2 text-xs">2019 - 2023</p>
-                                    <img className='w-[8px] h-[8px]' src="/assets/right angle triangle.png" alt="" />
+                                    <img className='w-[8px] h-[8px]' src="/assets/right angle triangle.webp" alt="" />
                                 </div>
                                 <div className="pt-4 px-2">
                                     <p className="text-md font-semibold">Bachelor's in Computer Science</p>
@@ -35,7 +35,7 @@ export default function EducationSkills() {
 
                                 <div className="absolute top-3 -left-2">
                                     <p className="bg-[#2c2ebf] py-1 px-2 text-xs">2017 - 2019</p>
-                                    <img className='w-[8px] h-[8px]' src="/assets/right angle triangle.png" alt="" />
+                                    <img className='w-[8px] h-[8px]' src="/assets/right angle triangle.webp" alt="" />
                                     <div></div>
                                 </div>
                                 <div className="pt-6 px-2">
@@ -49,7 +49,7 @@ export default function EducationSkills() {
 
                                 <div className="absolute top-3 -left-2">
                                     <p className="bg-[#2c2ebf] py-1 px-2 text-xs">2015 - 2017</p>
-                                    <img className='w-[8px] h-[8px]' src="/assets/right angle triangle.png" alt="" />
+                                    <img className='w-[8px] h-[8px]' src="/assets/right angle triangle.webp" alt="" />
                                 </div>
                                 <div className="pt-6 px-2">
                                     <p className="text-md font-semibold">Science (School)</p>

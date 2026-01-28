@@ -27,7 +27,7 @@ const Carousel = () => {
                     <SwiperSlide>
                         <div className="border-x-[12px] border-[#0e0e1a] bg-[#060614] px-4 w-[100%] h-[70%]  flex flex-col lg:flex-row items-center justify-evenly">
                             <div className="flex items-center justify-center w-[100%] lg:w-[20%]">
-                                <img className="h-[120px] w-[120px] rounded-full object-cover" src="/assets/usmanPic.jpg" alt="usmanPic" />
+                                <img className="h-[120px] w-[120px] rounded-full object-cover" src="/assets/usmanPic.webp" alt="usmanPic" />
                             </div>
                             <div className="flex flex-col w-[80%] text-[#ffffff]">
                                 <p>
@@ -46,7 +46,7 @@ const Carousel = () => {
                     <SwiperSlide>
                         <div className="border-x-[12px] border-[#0e0e1a] bg-[#060614] px-4 w-[100%] h-[70%]  flex flex-col lg:flex-row items-center justify-evenly">
                             <div className="flex items-center justify-center w-[100%] lg:w-[20%]">
-                                <img className="h-[120px] w-[120px]" src="/assets/osama uforia.png" alt="Uforia Logo" />
+                                <img className="h-[120px] w-[120px]" src="/assets/osama uforia.webp" alt="Uforia Logo" />
                             </div>
                             <div className="flex flex-col w-[80%] text-[#ffffff]">
                                 <p>
@@ -65,7 +65,7 @@ const Carousel = () => {
                     <SwiperSlide>
                         <div className="border-x-[12px] border-[#0e0e1a] bg-[#060614] px-4 w-[100%] h-[70%] flex flex-col lg:flex-row items-center justify-evenly">
                             <div className="flex items-center justify-center w-[100%] lg:w-[20%]">
-                                <img className="h-[120px] w-[120px] rounded-full object-cover" src="/assets/Dr Hasana.jpg" alt="Dr Hasna" />
+                                <img className="h-[120px] w-[120px] rounded-full object-cover" src="/assets/Dr Hasana.webp" alt="Dr Hasna" />
                             </div>
                             <div className="flex flex-col w-[80%] text-[#ffffff]">
                                 <p>
@@ -84,7 +84,7 @@ const Carousel = () => {
                     <SwiperSlide>
                         <div className="border-x-[12px] border-[#0e0e1a] bg-[#060614] px-12 w-[100%] h-[70%] flex flex-col lg:flex-row items-center justify-evenly">
                             <div className="flex items-center justify-center w-[100%] lg:w-[20%]">
-                                <img className="h-[120px] w-[120px]" src="/assets/Capture2.png" alt="Razia Pic" />
+                                <img className="h-[120px] w-[120px]" src="/assets/Capture2.webp" alt="Razia Pic" />
                             </div>
                             <div className="flex flex-col w-[80%] text-[#ffffff]">
                                 <p>

@@ -7,7 +7,7 @@ export default function FooterBar() {
 
                 <div className="flex flex-row md:py-0 py-2  items-center justify-center">
                     <p className="text-xs md:text-sm lg:text-base font-semibold">Developed with</p>
-                    <img className="px-2" src="/assets/Heart Logo.png" alt="" />
+                    <img className="px-2" src="/assets/Heart Logo.webp" alt="" />
                 </div>
 
                 <div className="">
