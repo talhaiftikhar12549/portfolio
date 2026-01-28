@@ -9,10 +9,10 @@ export default function MyExperience() {
             >
                 <div className="w-[90%] xl:w-[85%] 2xl:w-[70%] ">
                     <div className="py-10 ">
-                        <p className=" text-3xl py-2 [#2c2ebf] relative">
+                        <h2 className=" text-3xl py-2 [#2c2ebf] relative">
                             EXPERIENCE.{" "}
                             <span className="absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]"></span>
-                        </p>
+                        </h2>
                     </div>
 
                     <div className="pb-10">
@@ -24,7 +24,7 @@ export default function MyExperience() {
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">
-                                    <p className="text-lg font-bold">Web Developer</p>
+                                    <h3 className="text-lg font-bold">Web Developer</h3>
                                     <p className="text-sm ">
                                         <span className="cursor-pointer text-[#2c4ebf] hover:text-[#2c2ebf]">
                                             <a
@@ -81,7 +81,7 @@ export default function MyExperience() {
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">
-                                    <p className="text-lg font-bold">Web Developer</p>
+                                    <h3 className="text-lg font-bold">Web Developer</h3>
                                     <p className="text-sm ">
                                         <span className="cursor-pointer text-[#2c4ebf] hover:text-[#2c2ebf]">
                                             <a
@@ -138,9 +138,9 @@ export default function MyExperience() {
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0">
                                     <div className="py-2">
-                                        <p className="text-lg font-bold">
+                                        <h3 className="text-lg font-bold">
                                             IT Admin & Junior Accountant ( volunteer )
-                                        </p>
+                                        </h3>
                                         <p className="text-sm ">
                                             <span className="cursor-pointer text-[#2c4ebf] hover:text-[#2c2ebf]">
                                                 <a
@@ -197,7 +197,7 @@ export default function MyExperience() {
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">
-                                    <p className="text-lg font-bold">Teaching Assistant</p>
+                                    <h3 className="text-lg font-bold">Teaching Assistant</h3>
                                     <p className="text-sm ">
                                         <span className="cursor-pointer text-[#2c4ebf] hover:text-[#2c2ebf]">
                                             <a

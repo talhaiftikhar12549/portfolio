@@ -13,7 +13,7 @@ const GallerySection = () => {
             <div className="h-[100%] bg-[#0e0e1a] text-[#d9d7d7] flex flex-col items-center py-10">
                 <div className="w-[90%] xl:w-[85%] 2xl:w-[70%] h-[100%] ">
                     <div className="py-10 ">
-                        <p className=" text-3xl py-2 relative">GALLERY. <span className='absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]'></span></p>
+                        <h2 className=" text-3xl py-2 relative">GALLERY. <span className='absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]'></span></h2>
                     </div>
 
                     <div className="w-[100%] h-[100%] flex items-center justify-center">

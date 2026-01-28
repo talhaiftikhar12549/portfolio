@@ -29,7 +29,7 @@ export default function HeroSection() {
                 <div className="flex flex-col-reverse md:flex-row items-center pt-28 sm:pt-32 md:pt-24 md:h-[100%] w-[90%] xl:w-[70%] justify-between">
                     <div className="w-[90%] md:w-[55%]  xl:w-[50%]">
                         <p className="text-xl font-bold">Hello 👋, I'm</p>
-                        <p className="text-4xl md:text-6xl font-bold py-2">Talha</p>
+                        <h1 className="text-4xl md:text-6xl font-bold py-2">Talha</h1>
                         <div className="font-bold text-sm md:text-xl lg:text-2xl py-4">
                             <TypingTextAnimation />
                         </div>

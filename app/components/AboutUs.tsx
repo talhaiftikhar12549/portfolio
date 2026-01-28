@@ -25,10 +25,10 @@ export default function AboutUs() {
                     </div>
 
                     <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-left md:text-left px-4 md:px-16">
-                        <p className="text-3xl py-2 my-6 relative">
+                        <h2 className="text-3xl py-2 my-6 relative">
                             ABOUT ME.
                             <span className="absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]"></span>
-                        </p>
+                        </h2>
                         <p className="py-6 text-xl font-bold">My Journey as a Software Engineer</p>
                         <p className="text-sm md:text-lg">
                             After completing my pre-Engineering studies, I decided to pursue my career as a computer scientist at HITEC University. I started learning web development and have created some cool web apps using platforms like React, Vue, and Node. Aside from coding, I spend most of my time doing charity work.

@@ -11,8 +11,8 @@ const rubik = Rubik({
 
 export const metadata: Metadata = {
   title: "Talha Iftikhar - Software Engineer & Web Developer",
-  description: "Talha Iftikhar is a Software Engineer & Web Developer specializing in Next.js & React. Explore his portfolio to see projects and expertise.",
-  keywords: ["Software Engineer", "Talha Iftikhar", "Web Developer", "React Developer", "Next.js Developer", "Full Stack Developer", "Portfolio"],
+  description: "Talha Iftikhar is a Software Engineer & Web Developer specializing in Next.js & MERN Stack. Explore his portfolio to see projects and expertise.",
+  keywords: ["Software Engineer", "Talha Iftikhar", "Web Developer", "React Developer", "Next.js Developer", "Full Stack Developer", "MERN Stack Developer"],
   authors: [{ name: "Talha Iftikhar" }],
   publisher: "Talha Iftikhar",
   alternates: {

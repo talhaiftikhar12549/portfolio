@@ -40,7 +40,7 @@ export default function ProjectList() {
                                 <img className="h-[150px] w-[150px] object-contain" src={project.image} alt={project.title} />
                             </div>
                             <div className="w-[100%] md:w-[65%] py-0 px-4">
-                                <p className="text-lg text-center md:text-left font-bold">{project.title}</p>
+                                <h3 className="text-lg text-center md:text-left font-bold">{project.title}</h3>
                                 <div className="flex justify-center md:justify-start flex-wrap gap-1 items-center py-3 w-[100%]">
                                     {project.technologies.map((tech, techIndex) => (
                                         <div
@@ -73,10 +73,10 @@ export default function ProjectList() {
                             </span>
                         </div>
                         <div>
-                            <p className="text-3xl py-2 relative">
+                            <h3 className="text-3xl py-2 relative">
                                 {activeProject.title}
                                 <span className="absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]"></span>
-                            </p>
+                            </h3>
                         </div>
                         <div className="flex justify-center md:justify-start flex-wrap gap-1 items-center py-3 w-[100%]">
                             {activeProject.technologies.map((tech, techIndex) => (
@@ -100,10 +100,10 @@ export default function ProjectList() {
                             <img className="h-[150px] w-[150px] object-contain" src={activeProject.image} alt={activeProject.title} />
                         </div>
                         <div className="py-4">
-                            <p className="text-3xl py-2 relative">
+                            <h3 className="text-3xl py-2 relative">
                                 ABOUT
                                 <span className="absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]"></span>
-                            </p>
+                            </h3>
                             <p className="text-sm py-6 text-center md:text-left">{activeProject.description}</p>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ export default function EducationSkills() {
                 <div className="w-[90%] xl:w-[85%] 2xl:w-[70%] ">
 
                     <div className="py-10 ">
-                        <p className=" text-3xl py-2 [#2c2ebf] relative">EDUCATION & SKILLS. <span className='absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]'></span></p>
+                        <h2 className=" text-3xl py-2 [#2c2ebf] relative">EDUCATION & SKILLS. <span className='absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]'></span></h2>
                     </div>
 
                     <div className="flex py-2 flex-col md:flex-row  w-[100%]">
@@ -67,7 +67,7 @@ export default function EducationSkills() {
                         {/* My SKills Section */}
 
                         <div className="w-[100%] my-8 md:my-0 md:w-[60%] flex-col">
-                            <p className="text-3xl font-bold">My skills</p>
+                            <h3 className="text-3xl font-bold">My skills</h3>
                             <p className="py-4">I am a language-agnostic developer, primarily focused on logic. However, I am fluent in working with different technologies and frameworks, including C++, JavaScript/TypeScript, Python, and more.</p>
                             <div className="flex flex-row py-4 justify-between w-[100%]">
                                 <div className="w-[50%] h-[100%]">

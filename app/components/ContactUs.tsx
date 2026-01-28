@@ -13,7 +13,7 @@ export default function ContactUs() {
                 <div className="w-[90%] xl:w-[85%] 2xl:w-[70%] ">
 
                     <div className="py-10 ">
-                        <p className=" text-3xl py-2 [#2c2ebf] relative">CONTACT ME. <span className='absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]'></span></p>
+                        <h2 className=" text-3xl py-2 [#2c2ebf] relative">CONTACT ME. <span className='absolute bg-[#2c2ebf] bottom-0 left-0 h-[2px] w-[100px]'></span></h2>
                     </div>
 
 
