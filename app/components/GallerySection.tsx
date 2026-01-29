@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
@@ -42,78 +43,90 @@ const GallerySection = () => {
                                 }}
                             >
                                 <SwiperSlide>
-                                    <div className="relative">
-                                        <img
-                                            className="w-full max-h-[700px] h-100% object-cover"
+                                    <div className="relative h-[300px] md:h-[500px] w-full">
+                                        <Image
+                                            className="object-cover"
                                             src="/assets/desk2024.webp"
                                             alt="Desk setup 2023"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 80vw"
                                         />
-                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
+                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center z-10">
                                             Desk Setup 2024
                                         </p>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="relative">
-                                        <img
-                                            className="w-full max-h-[700px] h-100% object-cover"
+                                    <div className="relative h-[300px] md:h-[500px] w-full">
+                                        <Image
+                                            className="object-cover"
                                             src="/assets/povatUforia.webp"
                                             alt="POV at Uforia"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 80vw"
                                         />
-                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
+                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center z-10">
                                             POV at Uforia
                                         </p>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="relative">
-                                        <img
-                                            className="w-full max-h-[700px] h-100% object-cover"
+                                    <div className="relative h-[300px] md:h-[500px] w-full">
+                                        <Image
+                                            className="object-cover"
                                             src="/assets/rankingpicture.webp"
                                             alt="Ranking"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 80vw"
                                         />
-                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
+                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center z-10">
                                             Using SEO techniques to Rank website on 1st page
                                         </p>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="relative">
-                                        <img
-                                            className="w-full max-h-[700px] h-100% object-cover"
+                                    <div className="relative h-[300px] md:h-[500px] w-full">
+                                        <Image
+                                            className="object-cover"
                                             src="/assets/trickleup.webp"
                                             alt="POV at TrickleUp"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 80vw"
                                         />
-                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
+                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center z-10">
                                             Pov at Trickle Up
                                         </p>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="relative">
-                                        <img
-                                            className="w-full max-h-[700px] h-100% object-cover"
+                                    <div className="relative h-[300px] md:h-[500px] w-full">
+                                        <Image
+                                            className="object-cover"
                                             src="/assets/seo stats.webp"
                                             alt="SEO Stats"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 80vw"
                                         />
-                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
+                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center z-10">
                                             Stats do not lie.
                                         </p>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <div className="relative">
-                                        <img
-                                            className="w-full max-h-[700px] h-100% object-cover"
+                                    <div className="relative h-[300px] md:h-[500px] w-full">
+                                        <Image
+                                            className="object-cover"
                                             src="/assets/desk 2025.webp"
                                             alt="Desk setup 2025"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 80vw"
                                         />
-                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center">
+                                        <p className="absolute bottom-0 w-full bg-opacity-60 bg-black text-xl text-white py-4 text-center z-10">
                                             Working Rig 2025
                                         </p>
                                     </div>

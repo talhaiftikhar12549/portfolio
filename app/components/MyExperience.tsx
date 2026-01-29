@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function MyExperience() {
     return (
@@ -20,7 +21,7 @@ export default function MyExperience() {
                         <div className=" py-12 flex bg-[#060614]">
                             <div className="flex flex-col  sm:flex-row w-[100%]">
                                 <div className="sm:w-[25%] mx-2 md:mx-0  md:w-[20%] flex items-center justify-center">
-                                    <img className="h-[150px] w-[150px]" src="/assets/trickleup.svg" alt="" />
+                                    <Image className="object-contain" width={150} height={150} src="/assets/trickleup.svg" alt="Trickle Up Logo" />
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">
@@ -74,10 +75,12 @@ export default function MyExperience() {
                         <div className=" py-12 flex bg-[#060614]">
                             <div className="flex flex-col  sm:flex-row w-[100%]">
                                 <div className="sm:w-[25%] mx-2 md:mx-0  md:w-[20%] flex items-center justify-center">
-                                    <img
-                                        className="h-[150px] w-[150px]"
+                                    <Image
+                                        className="object-contain"
+                                        width={150}
+                                        height={150}
                                         src="/assets/uforiainfotech_logo-removebg-preview.webp"
-                                        alt=""
+                                        alt="Uforia Infotech Logo"
                                     />
                                 </div>
 
@@ -134,7 +137,7 @@ export default function MyExperience() {
                         <div className=" py-12 flex bg-[#060614]">
                             <div className="flex flex-col sm:flex-row w-[100%]">
                                 <div className="sm:w-[25%] mx-2 md:mx-0  md:w-[20%] flex items-center justify-center">
-                                    <img className="h-[100px] w-auto" src="/assets/ujala-school-logo-removebg-preview.webp" alt="Ujala Logo" />
+                                    <Image className="object-contain" width={150} height={100} src="/assets/ujala-school-logo-removebg-preview.webp" alt="Ujala Logo" />
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0">
@@ -194,7 +197,7 @@ export default function MyExperience() {
                         <div className=" py-12 flex bg-[#060614]">
                             <div className="flex flex-col sm:flex-row w-[100%]">
                                 <div className="sm:w-[25%] mx-2 md:mx-0  md:w-[20%] flex items-center justify-center">
-                                    <img className="h-[150px] w-[150px]" src="/assets/HITEC_University_Logo.webp" alt="" />
+                                    <Image className="object-contain" width={150} height={150} src="/assets/HITEC_University_Logo.webp" alt="HITEC University Logo" />
                                 </div>
 
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">

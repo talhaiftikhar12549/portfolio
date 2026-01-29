@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 export default function AboutUs() {
 
@@ -16,11 +17,13 @@ export default function AboutUs() {
                 <div className="w-full h-full flex flex-col md:flex-row items-center justify-center px-4 md:px-8">
 
                     <div className="w-full md:w-1/2 h-[50vh] md:h-[70vh] flex justify-center relative">
-                        <img
+                        <Image
                             title="Hobbies and activities I love to do."
                             src="/assets/hobbies collage.webp"
                             alt="Collage of hobbies"
-                            className="h-full w-auto object-contain"
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
 
