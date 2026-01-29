@@ -81,6 +81,7 @@ export default function HeroSection() {
                             priority
                             className="rounded-full xl:h-[400px] xl:w-[400px] object-cover"
                             title="Yep, that's me."
+                            sizes="(max-width: 768px) 260px, 400px"
                         />
                     </div>
                 </div>

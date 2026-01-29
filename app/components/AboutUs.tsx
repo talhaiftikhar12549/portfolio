@@ -23,7 +23,7 @@ export default function AboutUs() {
                             alt="Collage of hobbies"
                             fill
                             className="object-contain"
-                            sizes="(max-width: 768px) 100vw, 50vw"
+                            sizes="(max-width: 768px) 90vw, 50vw"
                         />
                     </div>
 
