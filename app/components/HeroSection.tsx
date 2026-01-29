@@ -73,11 +73,14 @@ export default function HeroSection() {
                           However, typical practice is renaming spaces. 
                           For now, I'll use the raw string path.
                         */}
-                        <img
-                            title="Yep, that's me."
-                            className="rounded-full xl:h-[400px] xl:w-[400px] object-cover"
+                        <Image
                             src="/assets/talha crop.webp"
                             alt="Talha"
+                            width={400}
+                            height={400}
+                            priority
+                            className="rounded-full xl:h-[400px] xl:w-[400px] object-cover"
+                            title="Yep, that's me."
                         />
                     </div>
                 </div>

@@ -1,14 +1,16 @@
 import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
-import AboutUs from "./components/AboutUs";
-import MyExperience from "./components/MyExperience";
-import EducationSkills from "./components/EducationSkills";
-import ContactUs from "./components/ContactUs";
-import FooterBar from "./components/FooterBar";
-import TestamonialSection from "./components/TestamonialSection";
-import GallerySection from "./components/GallerySection";
-import ProjectSection from "./components/ProjectSection";
 import ParticlesComponent from "./components/Particle";
+import dynamic from "next/dynamic";
+
+const AboutUs = dynamic(() => import("./components/AboutUs"));
+const MyExperience = dynamic(() => import("./components/MyExperience"));
+const EducationSkills = dynamic(() => import("./components/EducationSkills"));
+const ContactUs = dynamic(() => import("./components/ContactUs"));
+const FooterBar = dynamic(() => import("./components/FooterBar"));
+const TestamonialSection = dynamic(() => import("./components/TestamonialSection"));
+const GallerySection = dynamic(() => import("./components/GallerySection"));
+const ProjectSection = dynamic(() => import("./components/ProjectSection"));
 
 export default function Home() {
   return (

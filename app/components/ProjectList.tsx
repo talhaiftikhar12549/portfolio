@@ -37,7 +37,13 @@ export default function ProjectList() {
                         >
                             <div className="w-[100%] md:w-[35%] flex items-center justify-center">
                                 {/* Ensure width/height ratio is preserved or cover is used */}
-                                <img className="h-[150px] w-[150px] object-contain" src={project.image} alt={project.title} />
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={150}
+                                    height={150}
+                                    className="h-[150px] w-[150px] object-contain"
+                                />
                             </div>
                             <div className="w-[100%] md:w-[65%] py-0 px-4">
                                 <h3 className="text-lg text-center md:text-left font-bold">{project.title}</h3>
@@ -97,7 +103,13 @@ export default function ProjectList() {
                             </button></a>
                         </div>
                         <div className="w-[100%] py-12 px-4 flex justify-center">
-                            <img className="h-[150px] w-[150px] object-contain" src={activeProject.image} alt={activeProject.title} />
+                            <Image
+                                src={activeProject.image}
+                                alt={activeProject.title}
+                                width={150}
+                                height={150}
+                                className="h-[150px] w-[150px] object-contain"
+                            />
                         </div>
                         <div className="py-4">
                             <h3 className="text-3xl py-2 relative">
