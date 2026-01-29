@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://www.talhaiftikhar.com",
   },
   icons: {
-    icon: "/public/Talha portfolio logo.png",          // 👈 favicon
+    icon: "/favicon.png",          // 👈 favicon
   },
   robots: {
     index: true,
