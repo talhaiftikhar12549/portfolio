@@ -36,7 +36,7 @@ export const projects = [
         title: "Talha Portfolio",
         description: "My personal portfolio website, built from scratch using React, showcases my skill set in an aesthetic and visually appealing way.",
         technologies: ["React", "Particle.Js", "Tailwind", "Vite"],
-        image: "/assets/Talha Portfolio Logo.webp",
+        image: "/Talha portfolio logo.png",
         github: "https://github.com/talhaiftikhar12549/talhaiftikhar",
         live: "https://talhaiftikhar.netlify.app/",
     },

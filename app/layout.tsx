@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.talhaiftikhar.com",
   },
+  icons: {
+    icon: "/public/Talha portfolio logo.png",          // 👈 favicon
+  },
   robots: {
     index: true,
     follow: true,
