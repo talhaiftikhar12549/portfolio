@@ -26,11 +26,12 @@ export default function MyExperience() {
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">
                                     <h3 className="text-lg font-bold">Web Developer</h3>
                                     <p className="text-sm ">
-                                        <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd]">
+                                        <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd] underline">
                                             <a
                                                 href="https://trickleup.co.uk/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+
                                             >
                                                 {" "}
                                                 Trickle Up
@@ -83,7 +84,7 @@ export default function MyExperience() {
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">
                                     <h3 className="text-lg font-bold">Web Developer</h3>
                                     <p className="text-sm ">
-                                        <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd]">
+                                        <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd] underline">
                                             <a
                                                 href="https://uforiainfotech.com/"
                                                 target="_blank"
@@ -142,7 +143,7 @@ export default function MyExperience() {
                                             IT Admin & Junior Accountant ( volunteer )
                                         </h3>
                                         <p className="text-sm ">
-                                            <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd]">
+                                            <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd] underline">
                                                 <a
                                                     href="https://www.ujalaschool.org/"
                                                     target="_blank"
@@ -199,7 +200,7 @@ export default function MyExperience() {
                                 <div className="w-[75%] md:w-[70%] mx-8 md:mx-0 ">
                                     <h3 className="text-lg font-bold">Teaching Assistant</h3>
                                     <p className="text-sm ">
-                                        <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd]">
+                                        <span className="cursor-pointer text-[#60a5fa] hover:text-[#93c5fd] underline">
                                             <a
                                                 href="https://www.hitecuni.edu.pk/"
                                                 target="_blank"
