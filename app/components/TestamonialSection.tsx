@@ -65,7 +65,7 @@ const Carousel = () => {
                     <SwiperSlide>
                         <div className="border-x-[12px] border-[#0e0e1a] bg-[#060614] px-4 w-[100%] h-[70%] flex flex-col lg:flex-row items-center justify-evenly">
                             <div className="flex items-center justify-center w-[100%] lg:w-[20%]">
-                                <img className="h-[120px] w-[120px] rounded-full object-cover" src="/assets/Dr Hasana.webp" alt="Dr Hasna" />
+                                <img className="h-[120px] w-[120px] rounded-full object-cover" src="/assets/Dr hasana.webp" alt="Dr Hasna" />
                             </div>
                             <div className="flex flex-col w-[80%] text-[#ffffff]">
                                 <p>
