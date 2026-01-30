@@ -26,14 +26,14 @@ export default function ContactUs() {
                                 <p className="text-3xl font-semibold">Let's connect.</p>
                                 <div className='py-4'>
                                     <div className="py-4 px-0 xl:px-4 w-[100%] flex item-center">
-                                        <img className="px-2" src="/assets/placeholder.webp" alt="" />
+                                        <img className="px-2" src="/assets/placeholder.webp" alt="Location Icon" />
 
                                         <p className="text-xs md:text-sm lg:text-base px-2 font-semibold">Pakistan</p>
 
                                     </div>
 
                                     <div className="py-4 px-0 xl:px-4 w-[100%] flex item-center">
-                                        <img className="px-2" src="/assets/mailcolor.webp" alt="" />
+                                        <img className="px-2" src="/assets/mailcolor.webp" alt="Email Icon" />
 
                                         <p className="text-xs md:text-sm lg:text-base px-2 font-semibold">talhaiftikhar12549@gmail.com</p>
 
@@ -46,7 +46,7 @@ export default function ContactUs() {
 
                                             className="cursor-pointer"
                                             src={isHoveredGithub ? "/assets/githubcolor.webp" : "/assets/githubwhite.webp"}
-                                            alt="GitHub Icon"
+                                            alt="GitHub Profile"
                                             onMouseEnter={() => setIsHoveredGithub(true)}
                                             onMouseLeave={() => setIsHoveredGithub(false)}
                                         />
@@ -55,7 +55,7 @@ export default function ContactUs() {
                                         <img
                                             className="cursor-pointer"
                                             src={isHoveredLinkedin ? "/assets/linkedincolor.webp" : "/assets/linkedinwhite.webp"}
-                                            alt="LinkedIn Icon"
+                                            alt="LinkedIn Profile"
                                             onMouseEnter={() => setIsHoveredLinkedin(true)}
                                             onMouseLeave={() => setIsHoveredLinkedin(false)}
                                         />
@@ -64,7 +64,7 @@ export default function ContactUs() {
                                         <img
                                             className="cursor-pointer"
                                             src={isHoveredInsta ? "/assets/instagramcolor.webp" : "/assets/instagramwhite.webp"}
-                                            alt="Insta Icon"
+                                            alt="Instagram Profile"
                                             onMouseEnter={() => setIsHoveredInsta(true)}
                                             onMouseLeave={() => setIsHoveredInsta(false)}
                                         />
@@ -73,7 +73,7 @@ export default function ContactUs() {
                                         <img
                                             className="cursor-pointer"
                                             src={isHoveredGmail ? "/assets/gmailcolor.webp" : "/assets/gmailwhite.webp"}
-                                            alt="Gmail Icon"
+                                            alt="Send Email"
                                             onMouseEnter={() => setIsHoveredGmail(true)}
                                             onMouseLeave={() => setIsHoveredGmail(false)}
                                         />

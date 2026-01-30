@@ -75,7 +75,7 @@ export default function HeroSection() {
                         */}
                         <Image
                             src="/assets/talha crop.webp"
-                            alt="Talha"
+                            alt="Talha Iftikhar Portrait"
                             width={400}
                             height={400}
                             priority

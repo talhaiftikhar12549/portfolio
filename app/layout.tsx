@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google"; // Import Rubik font
 import "./globals.css";
 import Preloader from "./components/Preloader";
+import SchemaOrg from "./components/SchemaOrg";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -61,23 +62,7 @@ export default function RootLayout({
       <body
         className={`${rubik.variable} font-sans antialiased`}
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Talha Iftikhar",
-              "url": "https://www.talhaiftikhar.com",
-              "jobTitle": "Software Engineer & Web Developer",
-              "sameAs": [
-                "https://github.com/talhaiftikhar12549",
-                "https://www.linkedin.com/in/muhammadtalha12549/",
-                "https://www.instagram.com/talhaiftikhar12549/"
-              ]
-            })
-          }}
-        />
+        <SchemaOrg />
         <Preloader />
         {children}
       </body>
