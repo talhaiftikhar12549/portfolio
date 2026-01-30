@@ -18,8 +18,8 @@ export default function HeroSection() {
         // I will check if Resume folder existed in temp_reference/public or src/assets.
         // For now I'll keep the link as is, expecting it to be in public/.
         const link = document.createElement("a");
-        link.href = "/Resume/Muhammad Talha Resume.pdf";
-        link.download = "Talha Resume.pdf";
+        link.href = "/Talha Iftikhar Resume.pdf";
+        link.download = "Talha Iftikhar Resume.pdf";
         link.click();
     };
 
