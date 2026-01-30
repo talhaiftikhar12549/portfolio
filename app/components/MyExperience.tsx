@@ -70,7 +70,7 @@ export default function MyExperience() {
                         </div>
 
                         {/* Trickle Up Experience */}
-
+                        <div className="bg-[#0e0e1a] h-[5px]"></div>
                         {/* Uforia Experience */}
                         <div className=" py-12 flex bg-[#060614]">
                             <div className="flex flex-col  sm:flex-row w-[100%]">

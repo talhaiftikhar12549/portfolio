@@ -17,7 +17,7 @@ export default function EducationSkills() {
 
                         <div className="w-[100%] md:w-[40%]">
 
-                            <div className="w-[90%] border-1 border-b border-[#2a2a33] bg-[#060614]  py-8 px-4 relative">
+                            <div className="w-[90%] bg-[#060614]  py-8 px-4 relative">
 
                                 <div className="absolute top-3 -left-2">
                                     <p className="bg-[#2c2ebf] py-1 px-2 text-xs">2019 - 2023</p>
@@ -31,7 +31,7 @@ export default function EducationSkills() {
 
                             </div>
                             {/* <div className="bg-[#2a2a33] w-[90%] h-[1px]"></div> */}
-                            <div className="w-[90%] border-1 border-b border-[#2a2a33] bg-[#060614] py-8 px-4 relative">
+                            <div className="w-[90%] border-b border-t border-[#2a2a33] bg-[#060614] py-8 px-4 relative">
 
                                 <div className="absolute top-3 -left-2">
                                     <p className="bg-[#2c2ebf] py-1 px-2 text-xs">2017 - 2019</p>
