@@ -1,6 +1,14 @@
 
 export const projects = [
     {
+        title: "Help Humanity Uk",
+        description: "A charity-focused web platform that promotes humanitarian initiatives, enables donations, and connects supporters with impactful community-driven projects.",
+        technologies: ["Next", "Typescript", "Tailwind", "Vercel"],
+        image: "/assets/hhlogo.webp",
+        github: "https://github.com/talhaiftikhar12549/Help-Humanity",
+        live: "https://www.helphumanityuk.com/",
+    },
+    {
         title: "Scrum Board",
         description: "A visual tool that helps teams track tasks and monitor progress during project management. Built from scratch using Vue 3 and BootStrap.",
         technologies: ["Vue.Js", "JavaScript", "Bootstrap", "Vite"],
