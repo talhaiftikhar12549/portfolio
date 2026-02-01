@@ -4,7 +4,7 @@ export const projects = [
         title: "Help Humanity Uk",
         description: "A charity-focused web platform that promotes humanitarian initiatives, enables donations, and connects supporters with impactful community-driven projects.",
         technologies: ["Next", "Typescript", "Tailwind", "Vercel"],
-        image: "/assets/HelpHumanityLogo.webp",
+        image: "/assets/HelpHumanityLogo.png",
         github: "https://github.com/talhaiftikhar12549/Help-Humanity",
         live: "https://www.helphumanityuk.com/",
     },
