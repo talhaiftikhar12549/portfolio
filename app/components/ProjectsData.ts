@@ -1,6 +1,14 @@
 
 export const projects = [
     {
+        title: "Karimia",
+        description: "For over 30 years, Karimia Institute has been a beacon of positive change. Developed in WordPress custom theme using Bootstrap and PHP.",
+        technologies: ["WordPress", "PHP", "Bootstrap", "MySQL"],
+        image: "/assets/karimia_official_logo.webp",
+        github: "", // Assuming no GitHub public link for now, or user can provide later
+        live: "https://www.karimia.com/",
+    },
+    {
         title: "Help Humanity Uk",
         description: "A charity-focused web platform that promotes humanitarian initiatives, enables donations, and connects supporters with impactful community-driven projects.",
         technologies: ["Next", "Typescript", "Tailwind", "Vercel"],
