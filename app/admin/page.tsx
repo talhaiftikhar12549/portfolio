@@ -15,16 +15,22 @@ interface Blog {
 export default function AdminDashboard() {
     const [blogs, setBlogs] = useState<Blog[]>([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
     const [deleting, setDeleting] = useState<string | null>(null);
     const router = useRouter();
 
     async function fetchBlogs() {
         try {
-            const res = await fetch("/api/blogs");
+            const res = await fetch("/api/admin/blogs");
             const data = await res.json();
-            setBlogs(data);
+            if (Array.isArray(data)) {
+                setBlogs(data);
+            } else {
+                setError(data?.error || "Failed to load blogs");
+                setBlogs([]);
+            }
         } catch {
-            console.error("Failed to load blogs");
+            setError("Failed to load blogs");
         } finally {
             setLoading(false);
         }
@@ -89,6 +95,12 @@ export default function AdminDashboard() {
                 {loading ? (
                     <div className="flex justify-center py-16">
                         <div className="w-8 h-8 border-2 border-[#2c2ebf] border-t-transparent rounded-full animate-spin" />
+                    </div>
+                ) : error ? (
+                    <div className="text-center py-16">
+                        <p className="text-4xl mb-3">⚠️</p>
+                        <p className="text-red-400 font-semibold">{error}</p>
+                        <p className="text-[#9898b5] text-sm mt-2">Check that Firebase Admin SDK credentials are set in .env.local</p>
                     </div>
                 ) : blogs.length === 0 ? (
                     <div className="text-center py-16">
