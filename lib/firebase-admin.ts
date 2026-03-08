@@ -1,5 +1,8 @@
 import admin from "firebase-admin";
 
+let adminDb: admin.firestore.Firestore | null = null;
+let adminStorage: admin.storage.Storage | null = null;
+
 if (!admin.apps.length) {
     try {
         admin.initializeApp({
@@ -10,12 +13,16 @@ if (!admin.apps.length) {
             }),
             storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
         });
+        adminDb = admin.firestore();
+        adminStorage = admin.storage();
     } catch (err) {
         console.error("[firebase-admin] Failed to initialize:", err);
     }
+} else {
+    adminDb = admin.firestore();
+    adminStorage = admin.storage();
 }
 
-export const adminDb = admin.firestore();
-export const adminStorage = admin.storage();
+export { adminDb, adminStorage };
 export default admin;
 
