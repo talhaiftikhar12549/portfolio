@@ -13,6 +13,10 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
+    if (!adminDb) {
+        return NextResponse.json({ error: "Firebase not initialized" }, { status: 503 });
+    }
+
     try {
         const snapshot = await adminDb
             .collection("blogs")
