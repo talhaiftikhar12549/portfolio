@@ -21,8 +21,12 @@ export async function GET(request: NextRequest) {
 
         const blogs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
         return NextResponse.json(blogs);
-    } catch (error) {
-        console.error("Error fetching blogs for admin:", error);
-        return NextResponse.json({ error: "Failed to fetch blogs" }, { status: 500 });
+    } catch (error: any) {
+        console.error("Error fetching blogs for admin - code:", error?.code);
+        console.error("Error fetching blogs for admin - message:", error?.message);
+        console.error("Error fetching blogs for admin - details:", error?.details);
+        console.error("Error fetching blogs for admin - stack:", error?.stack);
+        return NextResponse.json({ error: "Failed to fetch blogs", details: error?.message }, { status: 500 });
     }
 }
+
