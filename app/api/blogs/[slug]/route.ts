@@ -8,6 +8,7 @@ function isAdmin(request: NextRequest): boolean {
 }
 
 async function getDocBySlug(slug: string) {
+    if (!adminDb) return null;
     const snapshot = await adminDb.collection("blogs").where("slug", "==", slug).limit(1).get();
     if (snapshot.empty) return null;
     return snapshot.docs[0];
@@ -15,6 +16,7 @@ async function getDocBySlug(slug: string) {
 
 // GET /api/blogs/[slug] — public
 export async function GET(_: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
+    if (!adminDb) return NextResponse.json({ error: "Firebase not initialized" }, { status: 503 });
     const { slug } = await params;
     try {
         const doc = await getDocBySlug(slug);

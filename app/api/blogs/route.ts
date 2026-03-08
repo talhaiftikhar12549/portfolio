@@ -10,6 +10,7 @@ function isAdmin(request: NextRequest): boolean {
 
 // GET /api/blogs — public: fetch all published blogs
 export async function GET() {
+    if (!adminDb) return NextResponse.json({ error: "Firebase not initialized" }, { status: 503 });
     try {
         const snapshot = await adminDb
             .collection("blogs")
@@ -30,6 +31,7 @@ export async function POST(request: NextRequest) {
     if (!isAdmin(request)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
+    if (!adminDb) return NextResponse.json({ error: "Firebase not initialized" }, { status: 503 });
 
     try {
         const body = await request.json();
