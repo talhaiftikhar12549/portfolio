@@ -1,22 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getBlogsData } from "@/lib/blogs"; // Import the direct logic
 
 export const metadata: Metadata = {
     title: "Blog | Talha Iftikhar",
     description: "Articles and thoughts on software engineering, web development, and technology by Talha Iftikhar.",
 };
 
-export const revalidate = 60; // ISR — revalidate every 60s
-
-async function getBlogs() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const res = await fetch(`${baseUrl}/api/blogs`, { next: { revalidate: 60 } });
-    if (!res.ok) return [];
-    return res.json();
-}
+// This ensures the page updates every 60 seconds without a full rebuild
+export const revalidate = 60;
 
 export default async function BlogPage() {
-    const blogs = await getBlogs();
+    // We call the function directly. No http://localhost needed!
+    const blogs = await getBlogsData();
 
     return (
         <main className="min-h-screen bg-[#060614]">
@@ -57,15 +53,7 @@ export default async function BlogPage() {
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {blogs.map((blog: {
-                            id: string;
-                            title: string;
-                            slug: string;
-                            excerpt: string;
-                            coverImage: string;
-                            tags: string[];
-                            publishedAt: string;
-                        }) => (
+                        {blogs.map((blog: any) => (
                             <div key={blog.id}>
                                 <Link href={`/blog/${blog.slug}`} className="group block">
                                     <article className="bg-[#0d0d2b] border border-[#1e1e4a] rounded-2xl overflow-hidden hover:border-[#2c2ebf] transition-all duration-300 hover:shadow-[0_0_30px_rgba(44,46,191,0.2)] hover:-translate-y-1">
