@@ -1,9 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
-import { storage } from "@/lib/firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-
 function slugify(text: string) {
     return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
@@ -55,13 +52,25 @@ export default function EditPostPage() {
         const file = e.target.files?.[0];
         if (!file) return;
         setUploading(true);
+        setError("");
+
+        const formData = new FormData();
+        formData.append("file", file);
+
         try {
-            const storageRef = ref(storage, `blog-covers/${Date.now()}-${file.name}`);
-            await uploadBytes(storageRef, file);
-            const url = await getDownloadURL(storageRef);
-            setForm((prev) => ({ ...prev, coverImage: url }));
+            const res = await fetch("/api/admin/upload", {
+                method: "POST",
+                body: formData,
+            });
+            const data = await res.json();
+
+            if (!res.ok) {
+                setError(data.error || "Image upload failed.");
+            } else {
+                setForm((prev) => ({ ...prev, coverImage: data.url }));
+            }
         } catch {
-            setError("Image upload failed.");
+            setError("Image upload failed. Please try again.");
         } finally {
             setUploading(false);
         }
