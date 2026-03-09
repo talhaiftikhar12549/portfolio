@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { adminStorage } from "@/lib/firebase-admin";
+import { v2 as cloudinary } from "cloudinary";
 import { verifyToken } from "@/lib/auth";
 
 function isAdmin(request: NextRequest): boolean {
@@ -7,13 +7,15 @@ function isAdmin(request: NextRequest): boolean {
     return token ? verifyToken(token) : false;
 }
 
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
 export async function POST(request: NextRequest) {
     if (!isAdmin(request)) {
         return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-
-    if (!adminStorage) {
-        return NextResponse.json({ error: "Firebase Storage not initialized" }, { status: 503 });
     }
 
     try {
@@ -24,28 +26,19 @@ export async function POST(request: NextRequest) {
         }
 
         const buffer = Buffer.from(await file.arrayBuffer());
-        const filename = `${Date.now()}-${file.name.replace(/[^a-zA-Z0-9.-]/g, "_")}`;
-        const bucket = adminStorage.bucket();
-        const fileRef = bucket.file(`blog-covers/${filename}`);
+        const base64 = `data:${file.type};base64,${buffer.toString("base64")}`;
 
-        // Generate a random token for Firebase Storage download
-        const downloadToken = crypto.randomUUID();
-
-        await fileRef.save(buffer, {
-            metadata: {
-                contentType: file.type,
-                metadata: {
-                    firebaseStorageDownloadTokens: downloadToken,
-                },
-            },
+        const result = await cloudinary.uploader.upload(base64, {
+            folder: "blog-covers",
+            resource_type: "image",
         });
 
-        // Construct the Firebase public URL using the token
-        const url = `https://firebasestorage.googleapis.com/v0/b/${bucket.name}/o/${encodeURIComponent(fileRef.name)}?alt=media&token=${downloadToken}`;
-
-        return NextResponse.json({ url });
+        return NextResponse.json({ url: result.secure_url });
     } catch (error: any) {
         console.error("Error uploading image:", error);
-        return NextResponse.json({ error: "Failed to upload image", details: error?.message }, { status: 500 });
+        return NextResponse.json(
+            { error: "Failed to upload image", details: error?.message },
+            { status: 500 }
+        );
     }
 }
