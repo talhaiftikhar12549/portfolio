@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
 
     try {
         const body = await request.json();
-        const { title, slug, excerpt, coverImage, tags, content } = body;
+        const { title, slug, excerpt, coverImage, tags, content, faqs } = body;
 
         if (!title || !slug || !content) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -34,7 +34,8 @@ export async function POST(request: NextRequest) {
         const now = new Date().toISOString();
         const docRef = await adminDb.collection("blogs").add({
             title, slug, excerpt: excerpt || "", coverImage: coverImage || "",
-            tags: tags || [], content, published: true, publishedAt: now, updatedAt: now,
+            tags: tags || [], content, faqs: faqs || [],
+            published: true, publishedAt: now, updatedAt: now,
         });
 
         return NextResponse.json({ id: docRef.id, slug }, { status: 201 });

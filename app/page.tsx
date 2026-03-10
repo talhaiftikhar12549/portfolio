@@ -8,6 +8,7 @@ const MyExperience = dynamic(() => import("./components/MyExperience"));
 const EducationSkills = dynamic(() => import("./components/EducationSkills"));
 const ContactUs = dynamic(() => import("./components/ContactUs"));
 const FooterBar = dynamic(() => import("./components/FooterBar"));
+const FaqSection = dynamic(() => import("./components/FaqSection"));
 const TestamonialSection = dynamic(() => import("./components/TestamonialSection"));
 const GallerySection = dynamic(() => import("./components/GallerySection"));
 const ProjectSection = dynamic(() => import("./components/ProjectSection"));
@@ -46,6 +47,9 @@ export default function Home() {
 
       {/* Testamonial */}
       <TestamonialSection />
+
+      {/* FAQ Section */}
+      <FaqSection />
 
       {/* Contact Us Section*/}
       <ContactUs />

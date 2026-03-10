@@ -1,9 +1,9 @@
 "use client";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+
+interface FaqItem { question: string; answer: string; }
 
 interface Blog {
     id: string;
@@ -15,6 +15,63 @@ interface Blog {
     content: string;
     publishedAt: string;
     updatedAt: string;
+    faqs?: FaqItem[];
+}
+
+function BlogFaqAccordion({ faqs }: { faqs: FaqItem[] }) {
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    if (!faqs || faqs.length === 0) return null;
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+    };
+
+    return (
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+            <div className="mt-16 pt-8 border-t border-[#1e1e4a]">
+                <h2 className="text-2xl font-black text-white mb-2">Frequently Asked Questions</h2>
+                <p className="text-[#9898b5] text-sm mb-6">Related questions about this topic</p>
+                <div className="space-y-3">
+                    {faqs.map((faq, i) => {
+                        const isOpen = openIndex === i;
+                        return (
+                            <div key={i}
+                                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
+                                    ? "border-[#2c2ebf] shadow-[0_0_25px_rgba(44,46,191,0.15)]"
+                                    : "border-[#1e1e4a] hover:border-[#2c2ebf]/50"
+                                    } bg-[#0d0d2b]`}>
+                                <button onClick={() => setOpenIndex(isOpen ? null : i)}
+                                    className="w-full flex items-center justify-between px-6 py-4 text-left group"
+                                    aria-expanded={isOpen}>
+                                    <span className={`font-semibold text-sm transition-colors ${isOpen ? "text-[#6b6dff]" : "text-white group-hover:text-[#6b6dff]"}`}>
+                                        {faq.question}
+                                    </span>
+                                    <span className={`ml-4 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? "bg-[#2c2ebf] text-white rotate-45" : "bg-[#1e1e4a] text-[#6b6dff] rotate-0"}`}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                                            <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+                                    <div className="overflow-hidden">
+                                        <p className="px-6 pb-5 text-[#9898b5] text-sm leading-relaxed">{faq.answer}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default function BlogPostPage() {
@@ -31,11 +88,8 @@ export default function BlogPostPage() {
                 if (res.status === 404) { setNotFound(true); return; }
                 const data = await res.json();
                 setBlog(data);
-            } catch {
-                setNotFound(true);
-            } finally {
-                setLoading(false);
-            }
+            } catch { setNotFound(true); }
+            finally { setLoading(false); }
         }
         if (slug) fetchBlog();
     }, [slug]);
@@ -61,6 +115,9 @@ export default function BlogPostPage() {
     const date = new Date(blog.publishedAt).toLocaleDateString("en-US", {
         year: "numeric", month: "long", day: "numeric",
     });
+
+    // Detect if content is HTML (from Quill) or Markdown (legacy plain text)
+    const isHtml = blog.content?.trimStart().startsWith("<");
 
     return (
         <main className="min-h-screen bg-[#060614]">
@@ -106,21 +163,29 @@ export default function BlogPostPage() {
                     </div>
                 </div>
 
-                {/* Markdown Content */}
-                <div className="prose prose-invert max-w-none
-          prose-headings:text-white prose-headings:font-bold
-          prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl
-          prose-p:text-[#c0c0d8] prose-p:leading-relaxed
-          prose-a:text-[#6b6dff] prose-a:no-underline hover:prose-a:underline
-          prose-strong:text-white
-          prose-code:text-[#6b6dff] prose-code:bg-[#1a1a4e] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
-          prose-pre:bg-[#0d0d2b] prose-pre:border prose-pre:border-[#1e1e4a] prose-pre:rounded-xl
-          prose-blockquote:border-[#2c2ebf] prose-blockquote:text-[#9898b5]
-          prose-li:text-[#c0c0d8]
-          prose-img:rounded-xl prose-img:border prose-img:border-[#1e1e4a]
-          prose-hr:border-[#1e1e4a]">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{blog.content}</ReactMarkdown>
-                </div>
+                {/* Content — HTML (Quill) or plain text */}
+                {isHtml ? (
+                    <div
+                        className="prose prose-invert max-w-none
+                            prose-headings:text-white prose-headings:font-bold
+                            prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl
+                            prose-p:text-[#c0c0d8] prose-p:leading-relaxed
+                            prose-a:text-[#6b6dff] prose-a:no-underline hover:prose-a:underline
+                            prose-strong:text-white prose-em:text-[#c0c0d8]
+                            prose-code:text-[#6b6dff] prose-code:bg-[#1a1a4e] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+                            prose-pre:bg-[#0d0d2b] prose-pre:border prose-pre:border-[#1e1e4a] prose-pre:rounded-xl
+                            prose-blockquote:border-[#2c2ebf] prose-blockquote:text-[#9898b5]
+                            prose-li:text-[#c0c0d8]
+                            prose-img:rounded-xl prose-img:border prose-img:border-[#1e1e4a]
+                            prose-hr:border-[#1e1e4a]"
+                        dangerouslySetInnerHTML={{ __html: blog.content }}
+                    />
+                ) : (
+                    <pre className="whitespace-pre-wrap text-[#c0c0d8] leading-relaxed font-sans text-base">{blog.content}</pre>
+                )}
+
+                {/* Per-Blog FAQ Accordion */}
+                {blog.faqs && blog.faqs.length > 0 && <BlogFaqAccordion faqs={blog.faqs} />}
 
                 {/* Back link */}
                 <div className="mt-16 pt-8 border-t border-[#1e1e4a]">
