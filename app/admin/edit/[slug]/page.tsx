@@ -153,7 +153,7 @@ export default function EditPostPage() {
                 {/* Cover Image */}
                 <div>
                     <label className="block text-[#9898b5] text-sm font-semibold mb-2">Cover Image</label>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 mb-2">
                         <label className="cursor-pointer flex items-center gap-2 px-4 py-2.5 bg-[#0d0d2b] border border-[#1e1e4a] rounded-xl text-sm text-[#9898b5] hover:border-[#2c2ebf] hover:text-white transition-all">
                             {uploading ? (
                                 <><span className="w-4 h-4 border-2 border-[#2c2ebf] border-t-transparent rounded-full animate-spin" /> Uploading…</>
@@ -166,6 +166,13 @@ export default function EditPostPage() {
                             <img src={form.coverImage} alt="Cover" className="h-10 w-16 object-cover rounded-lg border border-[#1e1e4a]" />
                         )}
                     </div>
+                    <input
+                        type="text"
+                        value={form.coverImage}
+                        onChange={(e) => setForm((prev) => ({ ...prev, coverImage: e.target.value }))}
+                        placeholder="Or paste a Cloudinary image URL here…"
+                        className="w-full bg-[#0d0d2b] border border-[#1e1e4a] text-[#9898b5] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[#2c2ebf] focus:ring-1 focus:ring-[#2c2ebf] transition-all placeholder:text-[#3a3a5c]"
+                    />
                 </div>
 
                 {/* Tags */}
