@@ -107,7 +107,7 @@ export default function BlogPostPage() {
                 </div>
 
                 {/* Markdown Content */}
-                <div className="prose prose-invert max-w-none
+                <div className="prose prose-invert max-w-none break-words whitespace-pre-wrap
           prose-headings:text-white prose-headings:font-bold
           prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl
           prose-p:text-[#c0c0d8] prose-p:leading-relaxed
