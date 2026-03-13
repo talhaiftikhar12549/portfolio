@@ -75,11 +75,49 @@ export default function EditPostPage() {
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault(); setSaving(true); setError("");
         try {
+            let parsedContent = form.content;
+
+            // Extract base64 images and upload them
+            const base64Regex = /<img[^>]+src="([^">]+)"/g;
+            let match;
+            const uploadPromises: Promise<{ oldSrc: string, newSrc: string }>[] = [];
+
+            while ((match = base64Regex.exec(form.content)) !== null) {
+                const src = match[1];
+                if (src.startsWith("data:image/")) {
+                    uploadPromises.push((async () => {
+                        try {
+                            const res = await fetch(src);
+                            const blob = await res.blob();
+                            const formData = new FormData();
+                            formData.append("file", blob, "image.png");
+
+                            const uploadRes = await fetch("/api/admin/upload", { method: "POST", body: formData });
+                            const data = await uploadRes.json();
+                            if (uploadRes.ok && data.url) {
+                                return { oldSrc: src, newSrc: data.url };
+                            }
+                        } catch (err) {
+                            console.error("Failed to upload inline image:", err);
+                        }
+                        return { oldSrc: src, newSrc: src };
+                    })());
+                }
+            }
+
+            const uploadResults = await Promise.all(uploadPromises);
+            for (const { oldSrc, newSrc } of uploadResults) {
+                if (oldSrc !== newSrc) {
+                    parsedContent = parsedContent.replace(oldSrc, newSrc);
+                }
+            }
+
             const res = await fetch(`/api/blogs/${originalSlug}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     ...form,
+                    content: parsedContent,
                     tags: form.tags.split(",").map((t) => t.trim()).filter(Boolean),
                     faqs: faqs.filter((f) => f.question.trim() && f.answer.trim()),
                 }),
