@@ -15,6 +15,7 @@ export default function NewPostPage() {
     const router = useRouter();
     const [form, setForm] = useState({
         title: "", slug: "", excerpt: "", coverImage: "", tags: "", content: "",
+        metaTitle: "", metaDescription: "",
     });
     const [faqs, setFaqs] = useState<FaqItem[]>([]);
     const [uploading, setUploading] = useState(false);
@@ -99,6 +100,8 @@ export default function NewPostPage() {
                     content: parsedContent,
                     tags: form.tags.split(",").map((t) => t.trim()).filter(Boolean),
                     faqs: faqs.filter((f) => f.question.trim() && f.answer.trim()),
+                    metaTitle: form.metaTitle,
+                    metaDescription: form.metaDescription,
                 }),
             });
             const data = await res.json();
@@ -173,6 +176,39 @@ export default function NewPostPage() {
                     <input type="text" value={form.tags}
                         onChange={(e) => setForm((prev) => ({ ...prev, tags: e.target.value }))}
                         placeholder="Next.js, React, Web Dev" className={inputCls} />
+                </div>
+
+                {/* ── SEO Meta ── */}
+                <div className="bg-[#0d0d2b] border border-[#1e1e4a] rounded-2xl p-5 space-y-4">
+                    <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-bold uppercase tracking-widest text-[#6b6dff]">🔍 SEO</span>
+                    </div>
+
+                    {/* Meta Title */}
+                    <div>
+                        <label className="block text-[#9898b5] text-sm font-semibold mb-2">
+                            Meta Title <span className="font-normal text-[#6b6b8a]">(recommended ≤ 60 chars)</span>
+                        </label>
+                        <input type="text" value={form.metaTitle}
+                            onChange={(e) => setForm((prev) => ({ ...prev, metaTitle: e.target.value }))}
+                            placeholder="Defaults to post title if left blank"
+                            maxLength={90}
+                            className={inputCls} />
+                        <p className="text-right text-xs text-[#3a3a5c] mt-1">{form.metaTitle.length} / 60</p>
+                    </div>
+
+                    {/* Meta Description */}
+                    <div>
+                        <label className="block text-[#9898b5] text-sm font-semibold mb-2">
+                            Meta Description <span className="font-normal text-[#6b6b8a]">(recommended ≤ 160 chars)</span>
+                        </label>
+                        <textarea value={form.metaDescription}
+                            onChange={(e) => setForm((prev) => ({ ...prev, metaDescription: e.target.value }))}
+                            placeholder="Defaults to excerpt if left blank"
+                            rows={3} maxLength={200}
+                            className={`${inputCls} resize-none`} />
+                        <p className="text-right text-xs text-[#3a3a5c] mt-1">{form.metaDescription.length} / 160</p>
+                    </div>
                 </div>
 
                 {/* ── Content (Quill) ── */}
