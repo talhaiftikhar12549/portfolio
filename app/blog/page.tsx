@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getBlogsData } from "@/lib/blogs"; // Import the direct logic
-
+import FaqSchema from "../components/FaqSchema";
 export const metadata: Metadata = {
     title: "Blog | Talha Iftikhar",
     description: "Articles and thoughts on software engineering, web development, and technology by Talha Iftikhar.",
@@ -16,6 +16,7 @@ export default async function BlogPage() {
 
     return (
         <main className="min-h-screen bg-[#060614]">
+            <FaqSchema />
             {/* Nav */}
             <header className="h-[10vh] md:h-[15vh] bg-[#060614] w-full px-5 xl:px-20 border-b border-[#1e1e4a] flex items-center justify-between">
                 <Link href="/" className="text-[#d9d7d7] font-bold text-lg hover:text-white transition-colors">

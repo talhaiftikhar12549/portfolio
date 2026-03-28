@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-
+import FaqSchema, { generalFaqs } from "../../components/FaqSchema";
 interface FaqItem { question: string; answer: string; }
 
 interface Blog {
@@ -22,20 +22,8 @@ function BlogFaqAccordion({ faqs }: { faqs: FaqItem[] }) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
     if (!faqs || faqs.length === 0) return null;
 
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqs.map((f) => ({
-            "@type": "Question",
-            name: f.question,
-            acceptedAnswer: { "@type": "Answer", text: f.answer },
-        })),
-    };
-
     return (
-        <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-            <div className="mt-16 pt-8 border-t border-[#1e1e4a]">
+        <div className="mt-16 pt-8 border-t border-[#1e1e4a]">
                 <h2 className="text-2xl font-black text-white mb-2">Frequently Asked Questions</h2>
                 <p className="text-[#9898b5] text-sm mb-6">Related questions about this topic</p>
                 <div className="space-y-3">
@@ -70,7 +58,6 @@ function BlogFaqAccordion({ faqs }: { faqs: FaqItem[] }) {
                     })}
                 </div>
             </div>
-        </>
     );
 }
 
@@ -121,6 +108,7 @@ export default function BlogPostPage() {
 
     return (
         <main className="min-h-screen bg-[#060614]">
+            <FaqSchema faqs={[...(blog.faqs || []), ...generalFaqs]} />
             {/* Nav */}
             <header className="h-[10vh] md:h-[12vh] bg-[#060614]/95 backdrop-blur-md w-full px-5 xl:px-20 border-b border-[#1e1e4a] flex items-center justify-between sticky top-0 z-50">
                 <Link href="/" className="text-[#d9d7d7] font-bold text-lg hover:text-white transition-colors">
