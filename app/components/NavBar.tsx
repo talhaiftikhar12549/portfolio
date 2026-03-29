@@ -26,7 +26,7 @@ export default function NavBar() {
         { onClick: () => scrollToSection('experience'), label: "EXPERIENCE" },
         { onClick: () => scrollToSection('projectsSection'), label: "PROJECTS" },
         { onClick: () => scrollToSection('Education&Skills'), label: "EDUCATION" },
-        { onClick: () => scrollToSection('contactUs'), label: "CONTACT" },
+        { href: "/contact", label: "CONTACT" },
         { href: "/blog", label: "BLOG" },
     ];
 
