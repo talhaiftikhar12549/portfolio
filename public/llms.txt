@@ -1,0 +1,17 @@
+# Talha Iftikhar - Software Engineer & Web Developer
+
+> Talha Iftikhar is a Software Engineer & Web Developer specializing in Next.js and the MERN Stack. This site showcases his portfolio, blog, and professional background.
+
+## About
+
+Talha Iftikhar is a software engineer with expertise in full-stack web development, primarily working with Next.js, React, Node.js, and MongoDB. He builds performant, SEO-optimized web applications and shares knowledge through his technical blog.
+
+## Pages
+
+- [Home](https://www.talhaiftikhar.com/): Portfolio landing page with sections covering about, experience, projects, skills, education, testimonials, and contact.
+- [Blog](https://www.talhaiftikhar.com/blog): Technical articles on web development, Next.js, React, and the MERN stack.
+- [Contact](https://www.talhaiftikhar.com/contact): Contact form to reach Talha directly.
+
+## Sitemap
+
+- [Sitemap](https://www.talhaiftikhar.com/sitemap.xml)
